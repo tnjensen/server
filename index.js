@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const userRoute = require('./routes/users');
 const authRoute = require('./routes/auth');
 const dbConnect = require('./dbConnect');
-const helmet = require("helmet");
 const morgan = require("morgan");
 const PORT = process.env.PORT || 3030;
 
@@ -20,7 +19,6 @@ dbConnect();
  */
 //middleware
 app.use(express.json()); //parser
-app.use(helmet());
 app.use(morgan("common"));
 
 //Cors fix
