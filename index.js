@@ -22,12 +22,12 @@ app.use(express.json()); //parser
 app.use(morgan("common"));
 
 //Cors fix
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://mern-auth-mkbw.onrender.com");
+/* app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "https://mern-auth-mkbw.onrender.com/login");
     res.header('Access-Control-Allow-Methods', 'OPTIONS, GET, PUT, PATCH, POST, DELETE');
     res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, Authorization");
     next();
-});
+}); */
 
 app.use("/api/users", userRoute);
 app.use("/auth", authRoute);
