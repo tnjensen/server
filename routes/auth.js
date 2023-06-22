@@ -66,11 +66,11 @@ router.post('/login', async (req,res) =>{
 })
 
 //Free endpoint
-router.get('/free-endpoint', (req,res)=> {
+router.get('/free', (req,res)=> {
     res.json({message: "This endpoint has free access"});
 })
 //Free endpoint
-router.get('/auth-endpoint', (req,res)=> {
+router.get('/auth', (req,res)=> {
     res.json({message: "You are authorized"});
 })
 

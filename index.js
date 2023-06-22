@@ -44,5 +44,5 @@ app.get('/users', (req,res) => {
 }); */
 
 app.listen(PORT, () =>{
-    console.log('Backend server is running on port ${PORT}');
+    console.log(`Backend server is running on port ${PORT}`);
 });
