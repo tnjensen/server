@@ -67,11 +67,11 @@ router.post('/login', async (req,res) =>{
 
 //Free endpoint
 router.get('/free', (req,res)=> {
-    res.json({message: "This endpoint has free access"});
+    res.send({message: "This endpoint has free access"});
 })
 //Auth endpoint
 router.get('/auth', (req,res)=> {
-    res.json({message: "You are authorized"});
+    res.send({message: "You are authorized"});
 })
 
 module.exports = router;
