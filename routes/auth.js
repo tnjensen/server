@@ -69,7 +69,7 @@ router.post('/login', async (req,res) =>{
 router.get('/free', (req,res)=> {
     res.json({message: "This endpoint has free access"});
 })
-//Free endpoint
+//Auth endpoint
 router.get('/auth', (req,res)=> {
     res.json({message: "You are authorized"});
 })
