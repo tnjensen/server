@@ -3,9 +3,9 @@ const User = require('../models/User');
 const router = require('express').Router();
 
 //test
-/* router.get('/', (req,res) =>{
+router.get('/', (req,res) =>{
     res.send("Hey, it's user route");
-}); */
+});
 //Update user
 router.put('/:id', async (req,res) =>{
     if(req.body.userId === req.params.id || req.body.isAdmin){
