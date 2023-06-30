@@ -56,7 +56,6 @@ router.post('/login', async (req,res) =>{
             email: user.email,
             token
         });
-        return res.json().then(err => Error(err));
     }
     catch(error){
         /* res.status(500).json(error); */
