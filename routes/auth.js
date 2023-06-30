@@ -43,21 +43,19 @@ router.post('/login', async (req,res) =>{
         const validPassword = bcrypt.compare(req.body.password, user.password);
         !validPassword && res.status(400).json('wrong password');
         
-        console.log(user)
-
-       /*  const token = jwt.sign({
+        const token = jwt.sign({
             userId: user._id,
             userEmail: user.email
         }, 
             "RANDOM-TOKEN",
             {expiresIn: "24h"}
-        ) */
+        )
        
 
         res.status(200).send({
             message: "Login successful",
             email: user.email,
-           /*  token */
+            token
         });
 
     }
