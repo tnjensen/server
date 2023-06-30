@@ -23,16 +23,16 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use("/api/users", userRoute);
+app.use("/users", userRoute);
 app.use("/auth", authRoute);
 
 //test
 app.get('/', (req,res) => {
     res.send('Welcome to the home page');
 });
-app.get('/users', (req,res) => {
+/* app.get('/users', (req,res) => {
     res.send('Welcome to the user page');
-});
+}); */
 
 app.listen(PORT, () =>{
     console.log(`Backend server is running on port ${PORT}`);

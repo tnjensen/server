@@ -42,6 +42,8 @@ router.post('/login', async (req,res) =>{
 
         const validPassword = bcrypt.compare(req.body.password, user.password);
         !validPassword && res.status(400).json('wrong password');
+        
+        console.log(user)
 
         const token = jwt.sign({
             userId: user._id,
